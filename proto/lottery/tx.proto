@@ -1,0 +1,24 @@
+syntax = "proto3";
+package mrfogg.lottery.lottery;
+
+// this line is used by starport scaffolding # proto/tx/import
+
+option go_package = "github.com/Mrfogg/lottery/x/lottery/types";
+
+// Msg defines the Msg service.
+service Msg {
+      rpc Bid(MsgBid) returns (MsgBidResponse);
+// this line is used by starport scaffolding # proto/tx/rpc
+}
+
+message MsgBid {
+  string creator = 1;
+  string value = 2;
+  uint64 amount = 3;
+}
+
+message MsgBidResponse {
+  string isWin = 1;
+}
+
+// this line is used by starport scaffolding # proto/tx/message

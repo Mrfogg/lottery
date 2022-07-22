@@ -1,0 +1,16 @@
+syntax = "proto3";
+package mrfogg.lottery.lottery;
+
+import "gogoproto/gogo.proto";
+import "lottery/params.proto";
+import "lottery/game_info.proto";
+// this line is used by starport scaffolding # genesis/proto/import
+
+option go_package = "github.com/Mrfogg/lottery/x/lottery/types";
+
+// GenesisState defines the lottery module's genesis state.
+message GenesisState {
+  Params params = 1 [(gogoproto.nullable) = false];
+  repeated GameInfo gameInfoList = 2 [(gogoproto.nullable) = false];
+  // this line is used by starport scaffolding # genesis/proto/state
+}

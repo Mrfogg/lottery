@@ -1,0 +1,12 @@
+syntax = "proto3";
+package mrfogg.lottery.lottery;
+
+option go_package = "github.com/Mrfogg/lottery/x/lottery/types";
+
+message GameInfo {
+  string index = 1; 
+  string mValue = 2; 
+  string cValue = 3; 
+  uint64 idValue = 4;
+}
+
